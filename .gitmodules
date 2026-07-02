@@ -4,6 +4,3 @@
 [submodule "franka_ros"]
 	path = franka_ros
 	url = https://github.com/frankarobotics/franka_ros
-[submodule "mjctrl"]
-	path = mjctrl
-	url = https://github.com/kevinzakka/mjctrl
