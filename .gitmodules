@@ -1,9 +1,6 @@
 [submodule "allegro_hand_ros_v5"]
 	path = allegro_hand_ros_v5
 	url = https://github.com/Wonikrobotics-git/allegro_hand_ros_v5.git
-[submodule "allegro_hand_ros_v5-3Finger"]
-	path = allegro_hand_ros_v5-3Finger
-	url = https://github.com/Wonikrobotics-git/allegro_hand_ros_v5-3Finger.git
 [submodule "franka_ros"]
 	path = franka_ros
 	url = https://github.com/frankarobotics/franka_ros
