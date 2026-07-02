@@ -1,7 +1,6 @@
 <mujoco model="fr3v2 scene">
   <compiler angle="radian" meshdir="assets"/>
   <option>
-    <flag contact="disable"/>
   </option>
   
   <statistic center="0.2 0 0.4" extent=".8"/>
@@ -35,6 +34,19 @@
     <body name = "target_table" pos = "0.4 0.2 0">
       <geom type="box" size = "0.2 0.4 0.3" rgba = "0.1 0.1 0.1 1"/>
     </body>
+
+    <body name = "target_box1" pos = "0.4 0 0.4">
+    <freejoint/>
+      <geom type="box" size = "0.03 0.03 0.03" friction="1 0.01 0.01" rgba = "1 1 1 1"/>
+    </body>
+
+    <body name = "target_box2" pos = "0.4 0.4 0.4">
+    <freejoint/>
+      <geom type="box" size = "0.03 0.03 0.03" friction="1 0.01 0.01" rgba = "1 1 1 1"/>
+    </body>
+
+
+
   </worldbody>
 
   <contact>
