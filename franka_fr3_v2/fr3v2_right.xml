@@ -205,6 +205,7 @@
                       <geom mesh="link7_5" material="white" class="fr3_right_visual"/>
                       <geom mesh="link7_6" material="white" class="fr3_right_visual"/>
                       <body name="fr3v2_right_link8" pos="0 0 0.2">
+                        <site name="attachment_site_r" rgba="1 0 0 1" size="0.01" group="1" quat="0 0 0 1"/>
                         <include file = "../wonik_allegro/right_hand.xml"/>
                       </body>
                     </body>
@@ -227,6 +228,7 @@
     <position class="fr3v2_right" name="right_joint6" joint="right_joint6" kp="2000" kv="200"/>
     <position class="fr3v2_right" name="right_joint7" joint="right_joint7" kp="2000" kv="200"/>
 
+
     <position name="ffa0" joint="ffj0" class="base"/>
     <position name="ffa1" joint="ffj1" class="proximal"/>
     <position name="ffa2" joint="ffj2" class="medial"/>
@@ -243,6 +245,11 @@
     <position name="tha1" joint="thj1" class="thumb_proximal"/>
     <position name="tha2" joint="thj2" class="thumb_medial"/>
     <position name="tha3" joint="thj3" class="thumb_distal"/>
+
   </actuator>
+
+  <keyframe>
+    <key name="home" qpos="0 0 0 -1.57079 0 1.57079 -0.7853" ctrl="0 0 0 -1.57079 0 1.57079 -0.7853"/>
+  </keyframe>
 
 </mujoco>

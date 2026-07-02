@@ -166,7 +166,7 @@
     <position class="fr3v2_left" name="left_joint5" joint="left_joint5" kp="2000" kv="200"/>
     <position class="fr3v2_left" name="left_joint6" joint="left_joint6" kp="2000" kv="200"/>
     <position class="fr3v2_left" name="left_joint7" joint="left_joint7" kp="2000" kv="200"/>
-
+    
     <position name="left_j0_0" joint="joint_0_0" kp="2" ctrlrange="-1.65 0.1"  forcerange="-15 15"/>
     <position name="left_j1_0" joint="joint_1_0" kp="2" ctrlrange="-1.75 1.06" forcerange="-15 15"/>
     <position name="left_j2_0" joint="joint_2_0" kp="2" ctrlrange="-1.45 1.45" forcerange="-15 15"/>
