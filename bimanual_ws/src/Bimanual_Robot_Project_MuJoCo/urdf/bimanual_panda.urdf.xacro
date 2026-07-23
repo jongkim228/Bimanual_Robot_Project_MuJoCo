@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="bimanual_panda">
+  <xacro:include filename="$(find franka_description)/robots/panda_arm.xacro"/>
+  <xacro:include filename="$(find franka_description)/robots/hand.xacro"/>
+  <xacro:include filename="$(find franka_description)/robots/utils.xacro"/>
+
+  <link name="base">
+    <visual>
+      <origin xyz="0 0 0.5" rpy="0 0 0"/>
+      <geometry>
+        <box size="1 2 1" />
+      </geometry>
+    </visual>
+    <collision>
+      <origin xyz="0 0 0.5" rpy="0 0 0"/>
+      <geometry>
+        <box size="1 2 1" />
+      </geometry>
+    </collision>
+  </link>
+
+  <xacro:panda_arm arm_id="left" connected_to="base" xyz="0 0.5 1" safety_distance="0.03"/>
+  <xacro:hand arm_id="left" rpy="0 0 ${-pi/4}" connected_to="left_link8" safety_distance="0.03"/>
+
+  <xacro:gazebo-joint joint="left_joint1" transmission="hardware_interface/PositionJointInterface" />
+  <xacro:gazebo-joint joint="left_joint2" transmission="hardware_interface/PositionJointInterface" />
+  <xacro:gazebo-joint joint="left_joint3" transmission="hardware_interface/PositionJointInterface" />
+  <xacro:gazebo-joint joint="left_joint4" transmission="hardware_interface/PositionJointInterface" />
+  <xacro:gazebo-joint joint="left_joint5" transmission="hardware_interface/PositionJointInterface" />
+  <xacro:gazebo-joint joint="left_joint6" transmission="hardware_interface/PositionJointInterface" />
+  <xacro:gazebo-joint joint="left_joint7" transmission="hardware_interface/PositionJointInterface" />
+
+  <xacro:panda_arm arm_id="right" connected_to="base" xyz="0 -0.5 1" safety_distance="0.03"/>
+  <xacro:hand arm_id="right" rpy="0 0 ${-pi/4}" connected_to="right_link8" safety_distance="0.03"/>
+
+  <xacro:gazebo-joint joint="right_joint1" transmission="hardware_interface/PositionJointInterface" />
+  <xacro:gazebo-joint joint="right_joint2" transmission="hardware_interface/PositionJointInterface" />
+  <xacro:gazebo-joint joint="right_joint3" transmission="hardware_interface/PositionJointInterface" />
+  <xacro:gazebo-joint joint="right_joint4" transmission="hardware_interface/PositionJointInterface" />
+  <xacro:gazebo-joint joint="right_joint5" transmission="hardware_interface/PositionJointInterface" />
+  <xacro:gazebo-joint joint="right_joint6" transmission="hardware_interface/PositionJointInterface" />
+  <xacro:gazebo-joint joint="right_joint7" transmission="hardware_interface/PositionJointInterface" />
+
+</robot>
