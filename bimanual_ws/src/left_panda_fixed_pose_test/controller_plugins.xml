@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<library path="lib/libleft_panda_fixed_pose_test">
+  <class
+      name="left_panda_fixed_pose_test/FixedPoseController"
+      type="left_panda_fixed_pose_test::FixedPoseController"
+      base_class_type="controller_interface::ControllerBase">
+    <description>
+      Minimum-jerk Cartesian fixed-pose test controller for one Panda.
+    </description>
+  </class>
+</library>

@@ -1,0 +1,5 @@
+<library path="lib/libleft_panda_bottle_pose_controller">
+  <class name="left_panda_bottle_pose_controller/BottlePoseController" type="left_panda_bottle_pose_controller::BottlePoseController" base_class_type="controller_interface::ControllerBase">
+    <description>Smooth Cartesian pose motion from current Panda pose to a fixed target.</description>
+  </class>
+</library>

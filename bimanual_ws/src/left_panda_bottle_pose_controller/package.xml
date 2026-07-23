@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>left_panda_bottle_pose_controller</name><version>0.1.0</version>
+  <description>Cartesian pose test controller for a left Panda using ROS1 franka_ros.</description>
+  <maintainer email="ntluan.ut@gmail.com">Nguyen Thanh Luan</maintainer><license>Apache-2.0</license>
+  <buildtool_depend>catkin</buildtool_depend>
+  <depend>controller_interface</depend><depend>franka_hw</depend><depend>franka_msgs</depend>
+  <depend>geometry_msgs</depend><depend>hardware_interface</depend><depend>pluginlib</depend>
+  <depend>realtime_tools</depend><depend>roscpp</depend><depend>std_srvs</depend>
+  <export><controller_interface plugin="${prefix}/left_panda_bottle_pose_controller_plugin.xml"/></export>
+</package>

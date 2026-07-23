@@ -1,0 +1,17 @@
+<launch>
+  <group ns="panda_left">
+    <rosparam
+        command="load"
+        file="$(find left_panda_fixed_pose_test)/config/controller.yaml"/>
+
+    <node
+        pkg="controller_manager"
+        type="spawner"
+        name="left_fixed_pose_spawner"
+        output="screen"
+        args="
+          left_fixed_pose_controller
+          --controller-manager /panda_left/controller_manager
+          --controller-manager-timeout 30"/>
+  </group>
+</launch>

@@ -1,0 +1,23 @@
+<launch>
+  <arg name="robot_ip" default="172.16.0.20"/>
+  <arg name="arm_id" default="panda_left"/>
+
+  <group ns="$(arg arm_id)">
+    <include file="$(find franka_control)/launch/franka_control.launch">
+      <arg name="robot_ip" value="$(arg robot_ip)"/>
+      <arg name="arm_id" value="$(arg arm_id)"/>
+      <arg name="load_gripper" value="false"/>
+    </include>
+
+    <rosparam
+      command="load"
+      file="$(find left_panda_fixed_pose_test)/config/controller.yaml"/>
+
+    <node
+      pkg="controller_manager"
+      type="spawner"
+      name="fixed_pose_spawner"
+      output="screen"
+      args="left_fixed_pose_controller"/>
+  </group>
+</launch>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>left_panda_fixed_pose_test</name>
+  <version>0.1.0</version>
+
+  <description>
+    Conservative minimum-jerk Cartesian fixed-pose test controller
+    for the left Franka Panda.
+  </description>
+
+  <maintainer email="ntluan.ut@gmail.com">
+    Nguyen Thanh Luan
+  </maintainer>
+
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <depend>controller_interface</depend>
+  <depend>eigen_conversions</depend>
+  <depend>franka_hw</depend>
+  <depend>franka_msgs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>hardware_interface</depend>
+  <depend>pluginlib</depend>
+  <depend>roscpp</depend>
+  <depend>std_srvs</depend>
+
+  <export>
+    <controller_interface
+        plugin="${prefix}/controller_plugins.xml"/>
+  </export>
+</package>

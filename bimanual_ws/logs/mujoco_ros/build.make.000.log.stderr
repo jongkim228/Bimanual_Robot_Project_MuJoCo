@@ -1,0 +1,16 @@
+In file included from [01m[K/home/scstln/jonghynun/bimanual_ws/src/mujoco_ros_pkgs/mujoco_ros/src/viewer.cpp:63[m[K:
+[01m[K/home/scstln/jonghynun/bimanual_ws/src/mujoco_ros_pkgs/mujoco_ros/include/mujoco_ros/util.hpp:136:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+  136 | }[01;35m[K;[m[K
+      |  [01;35m[K^[m[K
+In file included from [01m[K/home/scstln/jonghynun/bimanual_ws/src/mujoco_ros_pkgs/mujoco_ros/src/ros_one/ros_api.cpp:45[m[K:
+[01m[K/home/scstln/jonghynun/bimanual_ws/src/mujoco_ros_pkgs/mujoco_ros/include/mujoco_ros/util.hpp:136:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+  136 | }[01;35m[K;[m[K
+      |  [01;35m[K^[m[K
+In file included from [01m[K/home/scstln/jonghynun/bimanual_ws/src/mujoco_ros_pkgs/mujoco_ros/src/physics.cpp:45[m[K:
+[01m[K/home/scstln/jonghynun/bimanual_ws/src/mujoco_ros_pkgs/mujoco_ros/include/mujoco_ros/util.hpp:136:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+  136 | }[01;35m[K;[m[K
+      |  [01;35m[K^[m[K
+In file included from [01m[K/home/scstln/jonghynun/bimanual_ws/src/mujoco_ros_pkgs/mujoco_ros/src/offscreen_camera.cpp:45[m[K:
+[01m[K/home/scstln/jonghynun/bimanual_ws/src/mujoco_ros_pkgs/mujoco_ros/include/mujoco_ros/util.hpp:136:2:[m[K [01;35m[Kwarning: [m[Kextra ‘[01m[K;[m[K’ [[01;35m[K-Wpedantic[m[K]
+  136 | }[01;35m[K;[m[K
+      |  [01;35m[K^[m[K
