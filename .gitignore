@@ -1,4 +1,6 @@
+*.sif
 ros_noetic_sandbox/
+
 
 bimanual_ws/build/
 bimanual_ws/devel/
