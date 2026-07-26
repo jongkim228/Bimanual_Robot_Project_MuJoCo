@@ -1,7 +1,0 @@
-mujoco_ros_pkgs/mujoco_ros_sensors
-/home/scstln/jonghynun/bimanual_ws/devel/.private/mujoco_ros_sensors/lib/libmujoco_ros_sensors.so /home/scstln/jonghynun/bimanual_ws/devel/lib/libmujoco_ros_sensors.so
-/home/scstln/jonghynun/bimanual_ws/devel/.private/mujoco_ros_sensors/lib/pkgconfig/mujoco_ros_sensors.pc /home/scstln/jonghynun/bimanual_ws/devel/lib/pkgconfig/mujoco_ros_sensors.pc
-/home/scstln/jonghynun/bimanual_ws/devel/.private/mujoco_ros_sensors/lib/python3/dist-packages/pymujoco_ros_sensors.cpython-38-x86_64-linux-gnu.so /home/scstln/jonghynun/bimanual_ws/devel/lib/python3/dist-packages/pymujoco_ros_sensors.cpython-38-x86_64-linux-gnu.so
-/home/scstln/jonghynun/bimanual_ws/devel/.private/mujoco_ros_sensors/lib/python3/dist-packages/mujoco_ros_sensors/__init__.py /home/scstln/jonghynun/bimanual_ws/devel/lib/python3/dist-packages/mujoco_ros_sensors/__init__.py
-/home/scstln/jonghynun/bimanual_ws/devel/.private/mujoco_ros_sensors/share/mujoco_ros_sensors/cmake/mujoco_ros_sensorsConfig-version.cmake /home/scstln/jonghynun/bimanual_ws/devel/share/mujoco_ros_sensors/cmake/mujoco_ros_sensorsConfig-version.cmake
-/home/scstln/jonghynun/bimanual_ws/devel/.private/mujoco_ros_sensors/share/mujoco_ros_sensors/cmake/mujoco_ros_sensorsConfig.cmake /home/scstln/jonghynun/bimanual_ws/devel/share/mujoco_ros_sensors/cmake/mujoco_ros_sensorsConfig.cmake

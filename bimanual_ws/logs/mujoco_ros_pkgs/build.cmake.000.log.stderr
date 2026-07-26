@@ -1,1 +1,0 @@
-[33mWARNING: Metapackage "mujoco_ros_pkgs" should not have other dependencies besides a buildtool_depend on catkin and exec_depends.[0m

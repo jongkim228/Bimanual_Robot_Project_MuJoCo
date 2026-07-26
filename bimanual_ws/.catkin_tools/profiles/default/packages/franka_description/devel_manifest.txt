@@ -1,4 +1,0 @@
-franka_ros/franka_description
-/home/scstln/jonghynun/bimanual_ws/devel/.private/franka_description/lib/pkgconfig/franka_description.pc /home/scstln/jonghynun/bimanual_ws/devel/lib/pkgconfig/franka_description.pc
-/home/scstln/jonghynun/bimanual_ws/devel/.private/franka_description/share/franka_description/cmake/franka_descriptionConfig.cmake /home/scstln/jonghynun/bimanual_ws/devel/share/franka_description/cmake/franka_descriptionConfig.cmake
-/home/scstln/jonghynun/bimanual_ws/devel/.private/franka_description/share/franka_description/cmake/franka_descriptionConfig-version.cmake /home/scstln/jonghynun/bimanual_ws/devel/share/franka_description/cmake/franka_descriptionConfig-version.cmake
