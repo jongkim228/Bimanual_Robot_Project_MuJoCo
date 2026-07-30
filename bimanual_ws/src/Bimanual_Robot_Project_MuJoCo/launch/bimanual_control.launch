@@ -5,19 +5,29 @@
   <arg name="verbose" default="false" />
 
   <param name="robot_description"
-         command="$(find xacro)/xacro $(find bimanual_robot_project_mujoco)/urdf/bimanual_panda.urdf.xacro" />
+    command="$(find xacro)/xacro $(find bimanual_robot_project_mujoco)/urdf/bimanual_panda.urdf.xacro" />
 
   <rosparam file="$(arg mujoco_plugin_config)" command="load" />
 
+  <param name="/left/arm_id" value="left" />
+  <param name="/right/arm_id" value="right" />
+
   <env name="ROSCONSOLE_FORMAT" value="[${severity}] [${time}] [${logger}] [${node}]: ${message}"/>
   <env if="$(arg verbose)" name="ROSCONSOLE_CONFIG_FILE"
-       value="$(find mujoco_ros)/config/rosconsole.config"/>
+    value="$(find mujoco_ros)/config/rosconsole.config"/>
 
   <include file="$(find mujoco_ros)/launch/launch_server.launch" pass_all_args="true">
     <arg name="use_sim_time" value="true" />
   </include>
 
-  <node pkg="controller_manager" type="spawner" name="controller_spawner"
-        args="joint_state_controller left_arm_controller right_arm_controller"
-        output="screen" />
+
+  <node pkg="controller_manager" type="spawner" name="left_controller_spawner"
+    ns="left"
+    args="joint_state_controller left_arm_controller"
+    output="screen" />
+
+  <node pkg="controller_manager" type="spawner" name="right_controller_spawner"
+    ns="right"
+    args="joint_state_controller right_arm_controller"
+    output="screen" />
 </launch>

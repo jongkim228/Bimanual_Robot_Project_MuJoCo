@@ -28,6 +28,6 @@
 
   <export>
     <controller_interface
-        plugin="${prefix}/controller_plugins.xml"/>
+        plugin="${prefix}/left_panda_bottle_pose_test_plugin.xml"/>
   </export>
 </package>

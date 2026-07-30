@@ -72,3 +72,7 @@ install(
   DIRECTORY config launch
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )
+
+install(FILES left_panda_fixed_pose_test.xml
+  DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
+)

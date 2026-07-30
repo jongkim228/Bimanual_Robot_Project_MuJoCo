@@ -127,7 +127,7 @@
 
   <worldbody>
     <light name="right_top" pos="0 0 2" mode="trackcom"/>
-    <body name ="right_base" pos = "0 0 0.3">
+    <body name ="right_base" pos = "0 -0.1 0.3">
       <body name="right_link0" childclass="panda_right">
         <inertial mass="0.629769" pos="-0.041018 -0.00014 0.049974"
           fullinertia="0.00315 0.00388 0.004285 8.2904e-7 0.00015 8.2299e-6"/>
@@ -219,7 +219,7 @@
                       <geom mesh="link7_7" material="white" class="panda_right/visual"/>
                       <geom mesh="link7_c" class="panda_right/collision"/>
                       <body name="right_attachment" pos="0 0 0.2" quat="0.7071 0 -0.7071 0">
-                        <site name="right_attachment_site" quat="0 0 0 1"/>
+                        <site name="right_ee_site" quat="0 0 0 1"/>
                           <include file = "../wonik_allegro/right_hand.xml"/>
                       </body>
                     </body>
@@ -275,6 +275,5 @@
     <exclude body1="palm" body2="th_base"/>
     <exclude body1="palm" body2="th_proximal"/>
   </contact>
-
 
 </mujoco>

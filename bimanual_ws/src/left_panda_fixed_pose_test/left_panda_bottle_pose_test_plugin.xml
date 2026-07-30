@@ -1,0 +1,9 @@
+<library path="lib/libleft_panda_fixed_pose_test">
+  <class name="left_panda_fixed_pose_test/FixedPoseController"
+         type="left_panda_fixed_pose_test::FixedPoseController"
+         base_class_type="controller_interface::ControllerBase">
+    <description>
+    pose test controller
+    </description>
+  </class>
+</library>

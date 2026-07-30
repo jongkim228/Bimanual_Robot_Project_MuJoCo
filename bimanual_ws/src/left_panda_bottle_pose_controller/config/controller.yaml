@@ -1,7 +1,7 @@
 left_bottle_pose_controller:
   type: left_panda_bottle_pose_controller/BottlePoseController
-  arm_id: panda_left
-  base_frame: panda_left_link0
+  arm_id: left
+  base_frame: left_link0
   # TEST PLACEHOLDER: target flange pose in panda_left_link0, not bottle centre.
   target_xyz: [0.45, 0.20, 0.35]
   target_quaternion: [1.0, 0.0, 0.0, 0.0]  # [w,x,y,z]

@@ -1,50 +1,116 @@
 MujocoPlugins:
   - type: mujoco_ros_control/MujocoRosControlPlugin
     hardware:
-      type: mujoco_ros_control/DefaultRobotHWSim
+      type: franka_mujoco/FrankaHWSim
       control_period: 0.002
       robot_description: robot_description
       ignore_actuators: false
-  
-joint_state_controller:
-  type: joint_state_controller/JointStateController
-  publish_rate: 50
-  
-left_arm_controller:
-  type: position_controllers/JointTrajectoryController
-  joints:
-    - left_joint1
-    - left_joint2
-    - left_joint3
-    - left_joint4
-    - left_joint5
-    - left_joint6
-    - left_joint7
+      arm_id: left
+    robot_namespace: left
+  - type: mujoco_ros_control/MujocoRosControlPlugin
+    hardware:
+      type: franka_mujoco/FrankaHWSim
+      control_period: 0.002
+      robot_description: robot_description
+      ignore_actuators: false
+      arm_id: right
+    robot_namespace: right
 
-right_arm_controller:
-  type: position_controllers/JointTrajectoryController
-  joints:
-    - right_joint1
-    - right_joint2
-    - right_joint3
-    - right_joint4
-    - right_joint5
-    - right_joint6
-    - right_joint7
+left:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
 
-mujoco_ros_control:
-  pid_gains:
-    left_joint1: {p: 100.0, i: 0.0, d: 10.0}
-    left_joint2: {p: 100.0, i: 0.0, d: 10.0}
-    left_joint3: {p: 100.0, i: 0.0, d: 10.0}
-    left_joint4: {p: 100.0, i: 0.0, d: 10.0}
-    left_joint5: {p: 50.0, i: 0.0, d: 5.0}
-    left_joint6: {p: 50.0, i: 0.0, d: 5.0}
-    left_joint7: {p: 20.0, i: 0.0, d: 2.0}
-    right_joint1: {p: 100.0, i: 0.0, d: 10.0}
-    right_joint2: {p: 100.0, i: 0.0, d: 10.0}
-    right_joint3: {p: 100.0, i: 0.0, d: 10.0}
-    right_joint4: {p: 100.0, i: 0.0, d: 10.0}
-    right_joint5: {p: 50.0, i: 0.0, d: 5.0}
-    right_joint6: {p: 50.0, i: 0.0, d: 5.0}
-    right_joint7: {p: 20.0, i: 0.0, d: 2.0}
+  left_arm_controller:
+    type: position_controllers/JointTrajectoryController
+    joints:
+      - left_joint1
+      - left_joint2
+      - left_joint3
+      - left_joint4
+      - left_joint5
+      - left_joint6
+      - left_joint7
+    gains:
+      left_joint1: {p: 100.0, i: 0.0, d: 10.0}
+      left_joint2: {p: 100.0, i: 0.0, d: 10.0}
+      left_joint3: {p: 100.0, i: 0.0, d: 10.0}
+      left_joint4: {p: 100.0, i: 0.0, d: 10.0}
+      left_joint5: {p: 50.0, i: 0.0, d: 5.0}
+      left_joint6: {p: 50.0, i: 0.0, d: 5.0}
+      left_joint7: {p: 20.0, i: 0.0, d: 2.0}
+
+  motion_generators:
+    position:
+      gains:
+        left_joint1: {p: 600.0, d: 30.0}
+        left_joint2: {p: 600.0, d: 30.0}
+        left_joint3: {p: 600.0, d: 30.0}
+        left_joint4: {p: 600.0, d: 30.0}
+        left_joint5: {p: 250.0, d: 10.0}
+        left_joint6: {p: 150.0, d: 10.0}
+        left_joint7: {p: 50.0, d: 5.0}
+    velocity:
+      gains:
+        left_joint1: {p: 10.0, d: 0.0}
+        left_joint2: {p: 10.0, d: 0.0}
+        left_joint3: {p: 10.0, d: 0.0}
+        left_joint4: {p: 10.0, d: 0.0}
+        left_joint5: {p: 5.0, d: 0.0}
+        left_joint6: {p: 5.0, d: 0.0}
+        left_joint7: {p: 2.0, d: 0.0}
+
+  bottle_pose_controller:
+    type: left_panda_bottle_pose_controller/BottlePoseController
+    arm_id: left
+    base_frame: left_link0
+    # TEST PLACEHOLDER: target flange pose in left_link0, not bottle centre.
+    target_xyz: [0.5, -0.35, 0.35]
+    target_quaternion: [1, 0, 0.0, 0.0]  # [w,x,y,z]
+    motion_duration: 10.0
+    max_translation: 0.80
+    max_rotation: 1.5
+
+right:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  right_arm_controller:
+    type: position_controllers/JointTrajectoryController
+    joints:
+      - right_joint1
+      - right_joint2
+      - right_joint3
+      - right_joint4
+      - right_joint5
+      - right_joint6
+      - right_joint7
+    gains:
+      right_joint1: {p: 100.0, i: 0.0, d: 10.0}
+      right_joint2: {p: 100.0, i: 0.0, d: 10.0}
+      right_joint3: {p: 100.0, i: 0.0, d: 10.0}
+      right_joint4: {p: 100.0, i: 0.0, d: 10.0}
+      right_joint5: {p: 50.0, i: 0.0, d: 5.0}
+      right_joint6: {p: 50.0, i: 0.0, d: 5.0}
+      right_joint7: {p: 20.0, i: 0.0, d: 2.0}
+
+  motion_generators:
+    position:
+      gains:
+        right_joint1: {p: 600.0, d: 30.0}
+        right_joint2: {p: 600.0, d: 30.0}
+        right_joint3: {p: 600.0, d: 30.0}
+        right_joint4: {p: 600.0, d: 30.0}
+        right_joint5: {p: 250.0, d: 10.0}
+        right_joint6: {p: 150.0, d: 10.0}
+        right_joint7: {p: 50.0, d: 5.0}
+    velocity:
+      gains:
+        right_joint1: {p: 10.0, d: 0.0}
+        right_joint2: {p: 10.0, d: 0.0}
+        right_joint3: {p: 10.0, d: 0.0}
+        right_joint4: {p: 10.0, d: 0.0}
+        right_joint5: {p: 5.0, d: 0.0}
+        right_joint6: {p: 5.0, d: 0.0}
+        right_joint7: {p: 2.0, d: 0.0}

@@ -1,0 +1,20 @@
+name: CI
+
+on: [push, pull_request, workflow_dispatch]
+
+jobs:
+  default:
+    strategy:
+      fail-fast: false
+      matrix:
+        ros: [noetic, one]
+
+    name: ${{ matrix.ros }}
+    runs-on: ubuntu-latest
+    env:
+      ROS_DISTRO: ${{ matrix.ros }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: industrial_ci
+        uses: rhaschke/industrial_ci@master
