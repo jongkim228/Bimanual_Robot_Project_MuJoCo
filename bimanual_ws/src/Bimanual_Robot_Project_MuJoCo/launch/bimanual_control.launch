@@ -21,13 +21,15 @@
   </include>
 
 
-  <node pkg="controller_manager" type="spawner" name="left_controller_spawner"
-    ns="left"
-    args="joint_state_controller left_arm_controller"
-    output="screen" />
+  <rosparam command="load" file="$(find panda_bottle_pose_controller)/config/controller.yaml" ns="/left"/>
+  <node pkg="controller_manager" type="spawner" name="left_bottle_pose_controller_spawner"
+        ns="left"
+        args="joint_state_controller left_bottle_pose_controller"
+        output="screen" />
+
 
   <node pkg="controller_manager" type="spawner" name="right_controller_spawner"
-    ns="right"
-    args="joint_state_controller right_arm_controller"
-    output="screen" />
+        ns="right"
+        args="joint_state_controller right_arm_controller"
+        output="screen" />
 </launch>

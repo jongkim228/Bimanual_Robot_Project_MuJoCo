@@ -11,7 +11,7 @@
 #include <realtime_tools/realtime_buffer.h>
 #include <ros/node_handle.h>
 #include <std_srvs/Trigger.h>
-namespace left_panda_bottle_pose_controller {
+namespace panda_bottle_pose_controller {
 struct TargetPose { std::array<double,3> p{{0,0,0}}; std::array<double,4> q{{1,0,0,0}}; };
 class BottlePoseController : public controller_interface::MultiInterfaceController<franka_hw::FrankaPoseCartesianInterface,franka_hw::FrankaStateInterface> {
  public:

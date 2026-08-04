@@ -9,7 +9,7 @@ left_bottle_pose_controller:
   max_translation: 0.20
   max_rotation: 0.80
 
-right_arm_controller:
+right_bottle_pose_controller:
   type: panda_bottle_pose_controller/BottlePoseController
   arm_id: right
   base_frame: right_link0
