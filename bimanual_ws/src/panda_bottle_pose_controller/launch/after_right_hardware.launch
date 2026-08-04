@@ -1,0 +1,4 @@
+<launch>
+  <rosparam command="load" file="$(find panda_bottle_pose_controller)/config/controller.yaml" ns="/panda_right"/>
+  <node pkg="controller_manager" type="spawner" name="right_bottle_pose_controller_spawner" ns="/panda_right" output="screen" args="right_bottle_pose_controller"/>
+</launch>

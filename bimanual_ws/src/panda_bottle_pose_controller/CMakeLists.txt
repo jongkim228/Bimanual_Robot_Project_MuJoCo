@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.0.2)
-project(left_panda_bottle_pose_controller)
+project(panda_bottle_pose_controller)
 add_compile_options(-std=c++14 -Wall -Wextra -Wpedantic)
 find_package(catkin REQUIRED COMPONENTS controller_interface franka_hw franka_msgs geometry_msgs hardware_interface pluginlib realtime_tools roscpp std_srvs)
 find_package(Eigen3 REQUIRED)
@@ -9,9 +9,9 @@ add_library(${PROJECT_NAME} src/bottle_pose_controller.cpp)
 target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES})
 install(TARGETS ${PROJECT_NAME} ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION} LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION} RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION})
 install(DIRECTORY include/${PROJECT_NAME}/ DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION})
-install(FILES left_panda_bottle_pose_controller_plugin.xml DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
+install(FILES panda_bottle_pose_controller_plugin.xml DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 install(DIRECTORY config launch DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION})
 
-install(FILES left_panda_bottle_pose_controller_plugin.xml
+install(FILES panda_bottle_pose_controller_plugin.xml
   DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
 )

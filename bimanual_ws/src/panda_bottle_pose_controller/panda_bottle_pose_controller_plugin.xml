@@ -1,0 +1,5 @@
+<library path="lib/libpanda_bottle_pose_controller">
+  <class name="panda_bottle_pose_controller/BottlePoseController" type="panda_bottle_pose_controller::BottlePoseController" base_class_type="controller_interface::ControllerBase">
+    <description>Panda controller</description>
+  </class>
+</library>
