@@ -16,10 +16,10 @@ def main():
     msg.pose.position.y = 0.1
     msg.pose.position.z = 0.45
 
-    msg.pose.orientation.x = 1.0
+    msg.pose.orientation.x = 0.0
     msg.pose.orientation.y = 0.0
     msg.pose.orientation.z = 0.0
-    msg.pose.orientation.w = 0.0
+    msg.pose.orientation.w = 1.0
 
     pub.publish(msg)
     rospy.loginfo("Published target pose")

@@ -74,7 +74,7 @@
               <geom mesh="link4_2" material="dark_grey" class="panda_left/visual"/>
               <geom mesh="link4_3" material="white" class="panda_left/visual"/>
               <geom mesh="link4_c" class="panda_left/collision"/>
-              <body name="link5" pos="-0.0825 0.384 0" quat="1 -1 0 0" gravcomp="1">
+              <body name="left_link5" pos="-0.0825 0.384 0" quat="1 -1 0 0" gravcomp="1">
                 <inertial mass="1.225946" pos="-1.1953e-2 4.1065e-2 -3.8437e-2"
                   fullinertia="3.5549e-2 2.9474e-2 8.627e-3 -2.117e-3 -4.037e-3 2.29e-4"/>
                 <joint name="left_joint5"/>
@@ -84,7 +84,7 @@
                 <geom mesh="link5_c0" class="panda_left/collision"/>
                 <geom mesh="link5_c1" class="panda_left/collision"/>
                 <geom mesh="link5_c2" class="panda_left/collision"/>
-                <body name="link6" quat="1 1 0 0" gravcomp="1">
+                <body name="left_link6" quat="1 1 0 0" gravcomp="1">
                   <inertial mass="1.666555" pos="6.0149e-2 -1.4117e-2 -1.0517e-2"
                     fullinertia="1.964e-3 4.354e-3 5.433e-3 1.09e-4 -1.158e-3 3.41e-4"/>
                   <joint name="left_joint6" range="-0.0175 3.7525"/>
@@ -106,7 +106,7 @@
                   <geom mesh="link6_15" material="dark_grey" class="panda_left/visual"/>
                   <geom mesh="link6_16" material="white" class="panda_left/visual"/>
                   <geom mesh="link6_c" class="panda_left/collision"/>
-                  <body name="link7" pos="0.088 0 0" quat="1 1 0 0" gravcomp="1">
+                  <body name="left_link7" pos="0.088 0 0" quat="1 1 0 0" gravcomp="1">
                     <inertial mass="7.35522e-01" pos="1.0517e-2 -4.252e-3 6.1597e-2"
                       fullinertia="1.2516e-2 1.0027e-2 4.815e-3 -4.28e-4 -1.196e-3 -7.41e-4"/>
                     <joint name="left_joint7"/>
