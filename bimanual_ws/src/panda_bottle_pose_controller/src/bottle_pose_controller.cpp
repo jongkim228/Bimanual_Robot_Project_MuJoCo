@@ -155,7 +155,7 @@ void BottlePoseController::update(const ros::Time& now, const ros::Duration&) {
   Eigen::Quaterniond q0(M.block<3, 3>(0, 0));
   q0.normalize();
   Eigen::Quaterniond q1 = quat(active_target_);
-  if (q0.dot(q1) < 0) q1.coeffs() *= -1;  // 최단 경로 보정
+  if (q0.dot(q1) < 0) q1.coeffs() *= -1;
 
   Eigen::Matrix4d C = Eigen::Matrix4d::Identity();
   C.block<3, 3>(0, 0) = q0.slerp(u, q1).normalized().toRotationMatrix();

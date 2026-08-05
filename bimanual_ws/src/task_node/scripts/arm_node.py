@@ -3,6 +3,9 @@ import rospy
 from geometry_msgs.msg import PoseStamped
 from std_srvs.srv import Trigger
 
+pub = None
+start_srv = None
+
 def callback(msg):
     cmd = PoseStamped()
     cmd.header.stamp = rospy.Time.now()
@@ -18,10 +21,18 @@ def callback(msg):
 
 def main():
     global pub, start_srv
-    rospy.init_node("arm_node")
-    pub = rospy.Publisher("/left/left_bottle_pose_controller/target_pose", PoseStamped, queue_size=10)
 
-    start_srv = rospy.ServiceProxy("/left/left_bottle_pose_controller/start", Trigger)
+    rospy.init_node("arm_node", anonymous=True)
+
+    side = rospy.get_param("~side", "left")
+    controller_name = "{}_bottle_pose_controller".format(side)
+
+    #publish target coordinate to controller
+    pub = rospy.Publisher("/{}/{}/target_pose".format(side, controller_name), PoseStamped, queue_size=10)
+
+    #service to start control
+    rospy.wait_for_service("/{}/{}/start".format(side, controller_name))
+    start_srv = rospy.ServiceProxy("/{}/{}/start".format(side, controller_name), Trigger)
 
     sub = rospy.Subscriber("target_pose", PoseStamped, callback)
     

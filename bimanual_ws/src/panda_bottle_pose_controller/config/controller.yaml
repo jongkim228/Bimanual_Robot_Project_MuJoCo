@@ -6,8 +6,8 @@ left_bottle_pose_controller:
   target_xyz: [0.45, 0.20, 0.35]
   target_quaternion: [1.0, 0.0, 0.0, 0.0]  # [w,x,y,z]
   motion_duration: 10.0
-  max_translation: 0.20
-  max_rotation: 0.80
+  max_translation: 1.5
+  max_rotation: 3.2
 
 right_bottle_pose_controller:
   type: panda_bottle_pose_controller/BottlePoseController
@@ -17,5 +17,5 @@ right_bottle_pose_controller:
   target_xyz: [0.45, 0.20, 0.35]
   target_quaternion: [1.0, 0.0, 0.0, 0.0]  # [w,x,y,z]
   motion_duration: 10.0
-  max_translation: 0.20
-  max_rotation: 0.80
+  max_translation: 1.5
+  max_rotation: 3.2

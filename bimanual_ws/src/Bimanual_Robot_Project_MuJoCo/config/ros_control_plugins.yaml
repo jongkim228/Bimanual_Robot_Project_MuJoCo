@@ -60,17 +60,6 @@ left:
         left_joint6: {p: 5.0, d: 0.0}
         left_joint7: {p: 2.0, d: 0.0}
 
-  bottle_pose_controller:
-    type: left_panda_bottle_pose_controller/BottlePoseController
-    arm_id: left
-    base_frame: left_link0
-    # TEST PLACEHOLDER: target flange pose in left_link0, not bottle centre.
-    target_xyz: [0.5, -0.35, 0.35]
-    target_quaternion: [1, 0, 0.0, 0.0]  # [w,x,y,z]
-    motion_duration: 10.0
-    max_translation: 0.80
-    max_rotation: 1.5
-
 right:
   joint_state_controller:
     type: joint_state_controller/JointStateController

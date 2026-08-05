@@ -27,9 +27,9 @@
         args="joint_state_controller left_bottle_pose_controller"
         output="screen" />
 
-
-  <node pkg="controller_manager" type="spawner" name="right_controller_spawner"
+  <rosparam command="load" file="$(find panda_bottle_pose_controller)/config/controller.yaml" ns="/right"/>
+  <node pkg="controller_manager" type="spawner" name="right_bottle_pose_controller_spawner"
         ns="right"
-        args="joint_state_controller right_arm_controller"
+        args="joint_state_controller right_bottle_pose_controller"
         output="screen" />
 </launch>

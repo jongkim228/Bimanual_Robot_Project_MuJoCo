@@ -234,16 +234,16 @@
   </worldbody>
 
   <actuator>
-    <motor class="panda_right" name="right_actuator1" joint="left_joint1" forcerange="-87 87"/>
-    <motor class="panda_right" name="right_actuator2" joint="left_joint2" forcerange="-87 87"
+    <motor class="panda_right" name="right_actuator1" joint="right_joint1" forcerange="-87 87"/>
+    <motor class="panda_right" name="right_actuator2" joint="right_joint2" forcerange="-87 87"
       ctrlrange="-1.7628 1.7628"/>
-    <motor class="panda_right" name="right_actuator3" joint="left_joint3" forcerange="-87 87"/>
-    <motor class="panda_right" name="right_actuator4" joint="left_joint4" forcerange="-87 87"
+    <motor class="panda_right" name="right_actuator3" joint="right_joint3" forcerange="-87 87"/>
+    <motor class="panda_right" name="right_actuator4" joint="right_joint4" forcerange="-87 87"
       ctrlrange="-3.0718 -0.0698"/>
-    <motor class="panda_right" name="right_actuator5" joint="left_joint5" forcerange="-12 12"/>
-    <motor class="panda_right" name="right_actuator6" joint="left_joint6" forcerange="-12 12"
+    <motor class="panda_right" name="right_actuator5" joint="right_joint5" forcerange="-12 12"/>
+    <motor class="panda_right" name="right_actuator6" joint="right_joint6" forcerange="-12 12"
       ctrlrange="-0.0175 3.7525"/>
-    <motor class="panda_right" name="right_actuator7" joint="left_joint7" forcerange="-12 12"/>
+    <motor class="panda_right" name="right_actuator7" joint="right_joint7" forcerange="-12 12"/>
 
 
     <!--Fingers-->
