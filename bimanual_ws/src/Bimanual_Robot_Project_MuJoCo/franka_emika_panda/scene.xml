@@ -31,6 +31,10 @@
       <geom type="box" size = "0.2 0.4 0.3" rgba = "0.1 0.1 0.1 1"/>
     </body>
 
+    <body name = "target_object" pos = "0.4 0.2 0.31">
+      <geom type = "cylinder" size = "0.04 0.15" rgba = "1 0 0 1"/>
+    </body>
+
   </worldbody>
 
 <keyframe>

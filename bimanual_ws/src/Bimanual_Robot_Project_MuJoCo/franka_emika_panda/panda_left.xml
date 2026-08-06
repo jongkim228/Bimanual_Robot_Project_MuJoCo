@@ -122,11 +122,11 @@
                     <body name="left_attachment" pos="0 0 0.2" quat="0.3826834 0 0 0.9238795" gravcomp="1">
                       <site name="left_ee_site" quat="0 0 1 0" size="0.005" rgba="1 0 0 1"/>
                       <!-- X axis (red) -->
-                      <site name="axis_x" pos="0.1 0 0" quat="0.7071068 0 0.7071068 0" size="0.01 0.1" rgba="1 0 0 1" type="cylinder" group="0"/>
+                      <site name="axis_x_l" pos="0.1 0 0" quat="0.7071068 0 0.7071068 0" size="0.01 0.1" rgba="1 0 0 1" type="cylinder" group="0"/>
                       <!-- Y axis (green) -->
-                      <site name="axis_y" pos="0 0.1 0" quat="0.7071068 -0.7071068 0 0" size="0.01 0.1" rgba="0 1 0 1" type="cylinder" group="0"/>
+                      <site name="axis_y_l" pos="0 0.1 0" quat="0.7071068 -0.7071068 0 0" size="0.01 0.1" rgba="0 1 0 1" type="cylinder" group="0"/>
                       <!-- Z axis (blue) -->
-                      <site name="axis_z" pos="0 0 0.1" size="0.01 0.1" rgba="0 0 1 1" type="cylinder" group="0"/>
+                      <site name="axis_z_l" pos="0 0 0.1" size="0.01 0.1" rgba="0 0 1 1" type="cylinder" group="0"/>
                         <include file = "../allegro_hand_ros_v5-3Finger/src/allegro_hand_description/allegro_hand_left.xml"/>
                     </body>
                   </body>

@@ -219,6 +219,12 @@
                       <geom mesh="link7_7" material="white" class="panda_right/visual"/>
                       <geom mesh="link7_c" class="panda_right/collision"/>
                       <body name="right_attachment" pos="0 0 0.2" quat="0.7071 0 -0.7071 0" gravcomp="1">
+                        <!-- X axis (red) -->
+                      <site name="axis_x_r" pos="0.1 0 0" quat="0.7071068 0 0.7071068 0" size="0.01 0.1" rgba="1 0 0 1" type="cylinder" group="0"/>
+                      <!-- Y axis (green) -->
+                      <site name="axis_y_r" pos="0 0.1 0" quat="0.7071068 -0.7071068 0 0" size="0.01 0.1" rgba="0 1 0 1" type="cylinder" group="0"/>
+                      <!-- Z axis (blue) -->
+                      <site name="axis_z_r" pos="0 0 0.1" size="0.01 0.1" rgba="0 0 1 1" type="cylinder" group="0"/>
                         <site name="right_ee_site" quat="0 0 0 1"/>
                           <include file = "../wonik_allegro/right_hand.xml"/>
                       </body>
