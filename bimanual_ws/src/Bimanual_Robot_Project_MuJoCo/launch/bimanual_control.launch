@@ -1,35 +1,35 @@
 <?xml version="1.0"?>
 <launch>
-  <arg name="modelfile" default="$(find bimanual_robot_project_mujoco)/franka_emika_panda/scene.xml" />
-  <arg name="mujoco_plugin_config" default="$(find bimanual_robot_project_mujoco)/config/ros_control_plugins.yaml" />
-  <arg name="verbose" default="false" />
+<arg name="modelfile" default="$(find bimanual_robot_project_mujoco)/franka_emika_panda/scene.xml" />
+<arg name="mujoco_plugin_config" default="$(find bimanual_robot_project_mujoco)/config/ros_control_plugins.yaml" />
+<arg name="verbose" default="false" />
 
-  <param name="robot_description"
-    command="$(find xacro)/xacro $(find bimanual_robot_project_mujoco)/urdf/bimanual_panda.urdf.xacro" />
+<param name="robot_description"
+command="$(find xacro)/xacro $(find bimanual_robot_project_mujoco)/urdf/bimanual_panda.urdf.xacro" />
 
-  <rosparam file="$(arg mujoco_plugin_config)" command="load" />
+<rosparam file="$(arg mujoco_plugin_config)" command="load" />
 
-  <param name="/left/arm_id" value="left" />
-  <param name="/right/arm_id" value="right" />
+<param name="/left/arm_id" value="left" />
+<param name="/right/arm_id" value="right" />
 
-  <env name="ROSCONSOLE_FORMAT" value="[${severity}] [${time}] [${logger}] [${node}]: ${message}"/>
-  <env if="$(arg verbose)" name="ROSCONSOLE_CONFIG_FILE"
-    value="$(find mujoco_ros)/config/rosconsole.config"/>
+<env name="ROSCONSOLE_FORMAT" value="[${severity}] [${time}] [${logger}] [${node}]: ${message}"/>
+<env if="$(arg verbose)" name="ROSCONSOLE_CONFIG_FILE"
+value="$(find mujoco_ros)/config/rosconsole.config"/>
 
-  <include file="$(find mujoco_ros)/launch/launch_server.launch" pass_all_args="true">
-    <arg name="use_sim_time" value="true" />
-  </include>
+<include file="$(find mujoco_ros)/launch/launch_server.launch" pass_all_args="true">
+<arg name="use_sim_time" value="true" />
+</include>
 
 
-  <rosparam command="load" file="$(find panda_bottle_pose_controller)/config/controller.yaml" ns="/left"/>
-  <node pkg="controller_manager" type="spawner" name="left_bottle_pose_controller_spawner"
-        ns="left"
-        args="joint_state_controller left_bottle_pose_controller"
-        output="screen" />
+<rosparam command="load" file="$(find panda_bottle_pose_controller)/config/controller.yaml" ns="/left"/>
+<node pkg="controller_manager" type="spawner" name="left_bottle_pose_controller_spawner"
+ns="left"
+args="joint_state_controller left_bottle_pose_controller"
+output="screen" />
 
-  <rosparam command="load" file="$(find panda_bottle_pose_controller)/config/controller.yaml" ns="/right"/>
-  <node pkg="controller_manager" type="spawner" name="right_bottle_pose_controller_spawner"
-        ns="right"
-        args="joint_state_controller right_bottle_pose_controller"
-        output="screen" />
+<rosparam command="load" file="$(find panda_bottle_pose_controller)/config/controller.yaml" ns="/right"/>
+<node pkg="controller_manager" type="spawner" name="right_bottle_pose_controller_spawner"
+ns="right"
+args="joint_state_controller right_bottle_pose_controller"
+output="screen" />
 </launch>
